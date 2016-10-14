@@ -10,7 +10,7 @@ from autoadmin.models import ServerList
 from autoadmin.models import ModuleList
 from django.conf import settings
 from django.template import RequestContext
-#from public.views import *
+from public.views import *
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 #from django.utils.log import logger
 
@@ -126,7 +126,7 @@ def module_run(request):
         Module_ID = ""
     else:
         Module_ID = request.GET['ModuleID']
-        put_string+= Module_Id+"@@"
+        put_string+= Module_ID+"@@"
     
     if not 'hosts' in request.GET:
         Hosts=""
@@ -172,8 +172,7 @@ def module_add_post(request):
         module_name = request.GET['module_name']
         module_caption = request.GET['module_caption']
         module_extend = request.GET['module_extend']
-        module_id = '你好'
-        moduleobj = ModuleList(module_name=module_name,module_caption=module_caption,module_extend=module_extend,module_id=module_id)
+        moduleobj = ModuleList(module_name=module_name,module_caption=module_caption,module_extend=module_extend)
         try:
             moduleobj.save()
             #lastId = moduleobj.objects.order_by('-pk')[0]

@@ -22,7 +22,6 @@ class ModuleList(models.Model):
     module_name = models.CharField(max_length=60)
     module_caption = models.CharField(max_length=255)
     module_extend = models.CharField(max_length=2000)
-    module_id = models.CharField(max_length=60) 
     class Meta:
         db_table = u'module_list'
 

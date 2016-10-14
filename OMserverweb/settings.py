@@ -134,7 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    #'public',
+    'public',
     'autoadmin',
     #'omaudit',
     # Uncomment the next line to enable the admin:
